@@ -18,8 +18,10 @@ export class UserService {
     return this.users.find((user: IUser) => user.id === id);
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  update(id: number, data: Partial<IUser>) {
+    return this.users.map((user: IUser) =>
+      user.id === id ? { ...user, ...data } : user,
+    );
   }
 
   remove(id: number) {
