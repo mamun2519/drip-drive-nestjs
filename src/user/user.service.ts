@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { IUser } from './user.interface';
 
 @Injectable()
 export class UserService {
+  private readonly Users: IUser[] = [];
   async create() {
     return 'his action adds a new user';
   }
