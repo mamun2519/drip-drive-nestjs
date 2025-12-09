@@ -7,7 +7,7 @@ import { IUser } from './user.interface';
 export class UserService {
   private readonly Users: IUser[] = [];
   async create(user: IUser) {
-    return 'his action adds a new user';
+    return this.Users.push(user);
   }
 
   findAll() {
