@@ -6,7 +6,7 @@ import { IUser } from './user.interface';
 @Injectable()
 export class UserService {
   private readonly Users: IUser[] = [];
-  async create() {
+  async create(user: IUser) {
     return 'his action adds a new user';
   }
 
