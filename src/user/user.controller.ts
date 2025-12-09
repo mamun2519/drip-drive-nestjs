@@ -43,6 +43,11 @@ export class UserController {
   }
   @Get()
   findAllUser(@Req() request: Request) {
+    console.log('Request Info:', {
+      method: request.method,
+      url: request.url,
+      headers: request.headers,
+    });
     return this.userService.findAll();
   }
 }
