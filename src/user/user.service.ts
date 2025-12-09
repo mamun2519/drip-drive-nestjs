@@ -5,9 +5,9 @@ import { IUser } from './user.interface';
 
 @Injectable()
 export class UserService {
-  private readonly Users: IUser[] = [];
-  async create(user: IUser) {
-    return this.Users.push(user);
+  private readonly users: IUser[] = [];
+  create(user: IUser) {
+    return this.users.push(user);
   }
 
   findAll() {
