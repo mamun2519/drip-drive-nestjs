@@ -40,7 +40,7 @@ export class UserController {
     return this.userService.remove(+id);
   }
   @Get()
-  findAll() {
+  findAllUser() {
     return this.userService.findAll();
   }
 }
